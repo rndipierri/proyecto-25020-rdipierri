@@ -1,0 +1,128 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #007bff; 
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navegación */
+nav {
+    background-color: navy; 
+    padding: 0.5em 1em; /* achico altura */
+    text-align: center; /* Centro */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinear */
+    align-items: center; /* Centro vertical */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a, .nav-cart-icon a { 
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.5em; 
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.nav-cart-icon {
+    margin-left: auto; 
+    margin-right: 0; 
+}
+
+.nav-cart-icon a {
+    padding: 10px; 
+    font-size: 1.8em; 
+}
+
+/* Contenido Principal */
+main {
+    padding: 20px;
+}
+
+#catalogo-productos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo */
+    gap: 25px; /* Espacio */
+}
+
+.producto-card {
+    background-color: white;
+    border: 1px solid #ddd; /* Marco */
+    border-radius: 8px; /* Bordes */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px); /* Efecto */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Sombra */
+}
+
+.producto-card img {
+    max-width: 100%;
+    height: 200px; 
+    object-fit: cover; /* cobro el espacion para no deformar la imagenes */
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.producto-card h3 {
+    margin: 10px 0;
+    font-size: 1.4em;
+    color: #007bff;
+}
+
+.producto-card .precio {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745; 
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 30px;
+}

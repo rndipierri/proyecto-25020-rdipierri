@@ -1,0 +1,138 @@
+/* general */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #007bff; 
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navegación */
+nav {
+    background-color: navy; 
+    padding: 0.5em 1em; /* achico altura */
+    text-align: center; /* Centrar */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* alinear */
+    align-items: center; /* Centro */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a, .nav-cart-icon a { 
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.5em; 
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.nav-cart-icon {
+    margin-left: auto; 
+    margin-right: 0; 
+}
+
+.nav-cart-icon a {
+    padding: 10px; 
+    font-size: 1.8em; 
+}
+
+/* Principal */
+main {
+    padding: 20px;
+}
+
+#ofertas-especiales h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.promociones-grid {
+    display: grid;
+    /*  ajustar para mostrar 3 columnas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centra la grilla */
+}
+
+.promo-card {
+    background-color: white;
+    border: 2px solid #ffc107; 
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.promo-card img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.promo-card h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #dc3545; 
+}
+
+.promo-card .precio-oferta {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.promo-card .precio-original {
+    text-decoration: line-through;
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-left: 8px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 30px;
+}
