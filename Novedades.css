@@ -115,3 +115,16 @@ footer {
     padding: 1.5em 0;
     margin-top: 30px;
 }
+@media (max-width: 768px) {
+       nav {
+        overflow-x: auto; /* Habilita el scroll */
+        -webkit-overflow-scrolling: touch; /* Mejora el scroll */
+     }
+   
+    nav ul {
+        display: flex; /* Elementos en línea */
+        white-space: nowrap; 
+        padding-right: 20px;
+    }
+        margin-right: 15px;
+   }
