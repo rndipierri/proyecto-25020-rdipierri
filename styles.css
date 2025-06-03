@@ -108,33 +108,29 @@ footer {
   @media(max-width: 768px) {
       nav {
         overflow-x: auto; /* Habilito el scroll horizontal */
-        -webkit-overflow-scrolling: touch; /* Mejora scroll */
-    /* Selecciono la lista dentro del menú. */
-    nav ul {
-        display: flex; /* pongoen línea */
+        -webkit-overflow-scrolling: touch; /* Mejoro el scroll */
+   nav ul {
+        display: flex; /* pongo en línea */
         white-space: nowrap; 
         padding-right: 20px;
     }
-           /* Aquí es donde va el ajuste para las imágenes de bienvenida en móviles */
+           /* Ajusto imágenes para celular */
     .imagen-contenedor {
-        height: 180px; /* Prueba con este valor, puedes ajustarlo (ej. 150px, 200px) */
+        height: 180px; 
     }
 }
-
-    /* Hacemos que las imágenes de bienvenida se apilen verticalmente en móviles */
+    /* ordendo verticalmente solo para celu */
     .trio-imagenes-bienvenida {
-        flex-direction: column; /* Apila los elementos flexibles verticalmente */
-        align-items: center; /* Centra las imágenes si no ocupan todo el ancho */
+        flex-direction: column; 
+        align-items: center; /* Centro las imágenes */
     }
-
-    /* Aquí es donde va el ajuste para las imágenes de bienvenida en móviles */
-    .imagen-contenedor {
-        height: 180px; /* Prueba con este valor, puedes ajustarlo (ej. 150px, 200px) */
-        width: 90%;    /* Cada imagen ocupa el 90% del ancho disponible */
-        height: 200px; /* Puedes ajustar esta altura. Al tener más ancho, una altura mayor se verá mejor */
-        margin-bottom: 15px; /* Añade espacio entre las imágenes apiladas */
+        .imagen-contenedor {
+        height: 180px; 
+        width: 90%;    /* Ocupa el 90% del ancho disponible */
+        height: 200px; /* Ajusto altura */
+        margin-bottom: 15px; /* Pongo espacio entre las imágenes */
     }
     .imagen-contenedor:last-child {
-        margin-bottom: 0; /* Elimina el margen inferior de la última imagen */
+        margin-bottom: 0; /* Margen  0 inferior */
     }
 }
