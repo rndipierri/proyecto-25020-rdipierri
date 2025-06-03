@@ -121,3 +121,20 @@ footer {
     }
 }
 
+    /* Hacemos que las imágenes de bienvenida se apilen verticalmente en móviles */
+    .trio-imagenes-bienvenida {
+        flex-direction: column; /* Apila los elementos flexibles verticalmente */
+        align-items: center; /* Centra las imágenes si no ocupan todo el ancho */
+    }
+
+    /* Aquí es donde va el ajuste para las imágenes de bienvenida en móviles */
+    .imagen-contenedor {
+        height: 180px; /* Prueba con este valor, puedes ajustarlo (ej. 150px, 200px) */
+        width: 90%;    /* Cada imagen ocupa el 90% del ancho disponible */
+        height: 200px; /* Puedes ajustar esta altura. Al tener más ancho, una altura mayor se verá mejor */
+        margin-bottom: 15px; /* Añade espacio entre las imágenes apiladas */
+    }
+    .imagen-contenedor:last-child {
+        margin-bottom: 0; /* Elimina el margen inferior de la última imagen */
+    }
+}
