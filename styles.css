@@ -111,7 +111,6 @@ section {
     transform: scale(1.1); /* Efecto al pasar el cursor */
     filter: brightness(0.8); 
 }
-
 /* Pie de página */
 footer {
     background-color: #333;
@@ -120,3 +119,33 @@ footer {
     padding: 1.5em 0;
     margin-top: 20px;
 }
+/* Añade estos estilos al final de tu archivo CSS */
+
+/* Media query para aplicar estilos solo en pantallas pequeñas (ej. hasta 768px) */
+@media (max-width: 768px) {
+    /* Selecciona el contenedor de tu menú, ajusta el selector si es necesario */
+    nav {
+        overflow-x: auto; /* Habilita el scroll horizontal */
+        -webkit-overflow-scrolling: touch; /* Mejora el scroll en dispositivos iOS */
+        /* Opcional: Oculta la barra de scroll si no quieres que sea visible */
+        /* scrollbar-width: none;  Firefox */
+        /* -ms-overflow-style: none;  Internet Explorer 10+ */
+    }
+
+    /* Opcional: Regla para ocultar la barra de scroll en Webkit (Chrome, Safari) */
+    /* nav::-webkit-scrollbar {
+        display: none;
+    } */
+
+    /* Selecciona la lista dentro del menú, ajusta el selector si es necesario */
+    nav ul {
+        display: flex; /* Asegura que los elementos estén en línea */
+        white-space: nowrap; /* Evita que los elementos se envuelvan */
+        /* Opcional: Añade un poco de espacio al final para que el último elemento no quede pegado */
+        padding-right: 20px;
+    }
+
+    /* Opcional: Añade espacio entre los elementos del menú si no lo tienen */
+    /* nav ul li {
+        margin-right: 15px;
+    } */
