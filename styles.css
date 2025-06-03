@@ -115,4 +115,9 @@ footer {
         white-space: nowrap; 
         padding-right: 20px;
     }
+           /* Aquí es donde va el ajuste para las imágenes de bienvenida en móviles */
+    .imagen-contenedor {
+        height: 180px; /* Prueba con este valor, puedes ajustarlo (ej. 150px, 200px) */
+    }
+}
 
