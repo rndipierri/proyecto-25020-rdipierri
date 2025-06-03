@@ -6,7 +6,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-
 /* Encabezado */
 header {
     background-color: #007bff; 
@@ -14,19 +13,16 @@ header {
     padding: 1.5em 0;
     text-align: center;
 }
-
 header h1 {
     margin: 0;
     font-size: 2.5em;
 }
-
 /* Navegación */
 nav {
     background-color: navy; 
     padding: 0.5em 1em; /* achicar altura */
     text-align: center; /* Centro */
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -34,12 +30,10 @@ nav ul {
     display: flex; /* alinear */
     align-items: center; /* Centrar */
 }
-
 nav ul li {
     display: inline;
     margin-right: 20px;
 }
-
 nav ul li a, .nav-cart-icon a { 
     color: white;
     text-decoration: none;
@@ -48,32 +42,26 @@ nav ul li a, .nav-cart-icon a {
     display: inline-block;
     transition: background-color 0.3s ease;
 }
-
 nav ul li a:hover {
     background-color: #555;
     border-radius: 4px;
 }
-
 .nav-cart-icon {
     margin-left: auto; 
     margin-right: 0; 
 }
-
 .nav-cart-icon a {
     padding: 10px; 
     font-size: 1.8em; 
 }
-
 /* Principal */
 main {
     padding-top: 10px; 
     padding-left: 20px; padding-right: 20px; padding-bottom: 20px;
     background: linear-gradient(to bottom, #ffffff, #e9e9e9); /* fondo */
 }
-
 section {
     margin-bottom: 30px;
-    
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -90,7 +78,6 @@ section {
     margin-top: 20px; /* Superior */
     gap: 10px; 
 }
-
 .imagen-contenedor {
     flex: 1; 
     overflow: hidden; 
@@ -98,7 +85,6 @@ section {
     border: 3px solid #444; /* Recuadro imágenes */
     height: 300px; /* Altura fija */
 }
-
 .imagen-contenedor img {
     width: 100%; 
     height: 100%; 
@@ -106,7 +92,6 @@ section {
     transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out; /* efecto */
     object-fit: cover; 
 }
-
 .imagen-contenedor img:hover {
     transform: scale(1.1); /* Efecto al pasar el cursor */
     filter: brightness(0.8); 
@@ -119,33 +104,14 @@ footer {
     padding: 1.5em 0;
     margin-top: 20px;
 }
-/* Añade estos estilos al final de tu archivo CSS */
-
-/* Media query para aplicar estilos solo en pantallas pequeñas (ej. hasta 768px) */
 @media (max-width: 768px) {
-    /* Selecciona el contenedor de tu menú, ajusta el selector si es necesario */
-    nav {
-        overflow-x: auto; /* Habilita el scroll horizontal */
-        -webkit-overflow-scrolling: touch; /* Mejora el scroll en dispositivos iOS */
-        /* Opcional: Oculta la barra de scroll si no quieres que sea visible */
-        /* scrollbar-width: none;  Firefox */
-        /* -ms-overflow-style: none;  Internet Explorer 10+ */
-    }
-
-    /* Opcional: Regla para ocultar la barra de scroll en Webkit (Chrome, Safari) */
-    /* nav::-webkit-scrollbar {
-        display: none;
-    } */
-
-    /* Selecciona la lista dentro del menú, ajusta el selector si es necesario */
+      nav {
+        overflow-x: auto; /* Habilito el scroll horizontal */
+        -webkit-overflow-scrolling: touch; /* Mejora el scroll */
+    /* Selecciono la lista dentro del menú. */
     nav ul {
-        display: flex; /* Asegura que los elementos estén en línea */
-        white-space: nowrap; /* Evita que los elementos se envuelvan */
-        /* Opcional: Añade un poco de espacio al final para que el último elemento no quede pegado */
+        display: flex; /* pongoen línea */
+        white-space: nowrap; 
         padding-right: 20px;
     }
 
-    /* Opcional: Añade espacio entre los elementos del menú si no lo tienen */
-    /* nav ul li {
-        margin-right: 15px;
-    } */
