@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión / Registrarse - Mi Tienda</title>
+    <link rel="stylesheet" href="base.css"> <!-- Estilos -->
+    <link rel="stylesheet" href="sesion.css"> <!-- Estilos exclusivos para la página de sesión -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+            <li><a href="sesion.html">Inicie Sesión o regístrese</a></li> 
+            <li class="nav-cart-icon">
+                <a href="carrito.html" aria-label="Carrito de compras">🛒 <span id="cart-count" class="cart-count-badge">0</span></a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Inicie Sesión o Regístrese</h1>
+    </header>
+
+    <main>
+        <section id="formulario-sesion">
+            <h2>Accede a tu cuenta</h2>
+            <p>Por favor, introduce tus credenciales para iniciar sesión o regístrate si eres nuevo.</p>
+            
+            <form id="login-form" method="POST"> <!-- Inicio del formulario -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-text"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-text"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">Iniciar Sesión</button>
+                </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="global.js" defer></script>
+    <script src="sesion.js" defer></script> <!-- script de validación -->
+</body>
+</html>

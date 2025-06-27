@@ -1,3 +1,4 @@
+/* Estilos específicos para la página de Productos (Productos.css) */
 /* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif;
@@ -23,16 +24,16 @@ header h1 {
 /* Navegación */
 nav {
     background-color: navy; 
-    padding: 0.5em 1em; /* achico altura */
-    text-align: center; /* Centro */
+    padding: 0.5em 1em; 
+    text-align: center; 
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Alinear */
-    align-items: center; /* Centro vertical */
+    display: flex; 
+    align-items: center; 
 }
 
 nav ul li {
@@ -54,8 +55,19 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-.nav-cart-icon {
+/* Estilos para el enlace de "Iniciar Sesión / Registrarse" */
+nav ul li:nth-last-child(2) {
     margin-left: auto; 
+    margin-right: 5px; 
+}
+
+nav ul li:nth-last-child(2) a {
+    font-size: 1em; 
+    padding: 10px 8px; 
+}
+
+.nav-cart-icon {
+    margin-left: 0; 
     margin-right: 0; 
 }
 
@@ -79,28 +91,28 @@ main {
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo */
-    gap: 25px; /* Espacio */
+    gap: 25px; 
 }
 
 .producto-card {
     background-color: white;
-    border: 1px solid #ddd; /* Marco */
-    border-radius: 8px; /* Bordes */
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
     padding: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .producto-card:hover {
-    transform: translateY(-5px); /* Efecto */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Sombra */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
 }
 
 .producto-card img {
     max-width: 100%;
     height: 200px; 
-    object-fit: cover; /* cobro el espacion para no deformar la imagenes */
+    object-fit: cover; 
     border-bottom: 1px solid #eee;
     margin-bottom: 15px;
     border-radius: 4px;
@@ -118,21 +130,70 @@ main {
     color: #28a745; 
 }
 
+/* Estilo detalles de precios */
+.producto-card .detalle-precios-producto {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+.producto-card .precio-final-item {
+    margin: 5px 0;
+    font-size: 1.2em; 
+    font-weight: bold;
+}
+
+.producto-card .precio-final-etiqueta {
+    color: #333;
+}
+
+.producto-card .precio-final-valor {
+    color: #28a745; 
+}
+
+.producto-card .precio-base-item {
+    margin: 3px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.producto-card .precio-base-leyenda {
+    font-style: italic;
+    margin-left: 5px;
+}
+/* Estilos para el botón "Agregar al Carrito" */
+.btn-agregar-carrito {
+    background-color: navy; 
+    color: white;
+    padding: 12px 20px; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 15px; 
+    display: block; 
+    width: 100%; 
+    box-sizing: border-box; 
+    transition: background-color 0.2s ease-in-out;
+}
+.btn-agregar-carrito:hover {
+    background-color: #000066; 
+}
 /* Pie de página */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1.5em 0;
-    margin-top: 20px;
+    margin-top: 30px;
 }
- @media(max-width: 768px) {
-      nav {
-        overflow-x: auto; /* Habilito el scroll horizontal */
-        -webkit-overflow-scrolling: touch; /* Mejora scroll */
-    /* Selecciono la lista dentro del menú. */
-    nav ul {
-        display: flex; /* pongoen línea */
-        white-space: nowrap; 
-        padding-right: 20px;
+/* Media query para aplicar estilos */
+@media (max-width: 768px) { 
+        -webkit-overflow-scrolling: touch; 
     }
+     nav ul {
+        display: flex; 
+        white-space: nowrap; 
+               padding-right: 20px;
+    }
+  }

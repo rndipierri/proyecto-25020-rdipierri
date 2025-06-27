@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novedades - Mi Tienda</title>
+<link rel="stylesheet" href="Novedades.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+            <li><a href="sesion.html">Inicie Sesión o regístrese</a></li>
+            <li class="nav-cart-icon">
+                <a href="carrito.html" aria-label="Carrito de compras">🛒 <span id="cart-count" class="cart-count-badge">0</span></a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Últimas Novedades</h1>
+    </header>
+
+    <main>
+        <section id="ultimas-noticias">
+            <h2>Mantente al Día</h2>
+            <article class="novedad-item">
+                <h3>¡Nuevo Lanzamiento Lavarropas Automáticos! </h3>
+                <p>Descubre los colores y estilos que marcarán tendencia esta temporada. ¡Ya disponibles en nuestra tienda!</p>
+                <small>Publicado: 25 de Mayo, 2025</small>
+            </article>
+            <article class="novedad-item">
+                <h3>Video: Como se Produce</h3>
+                <p>Te mostramos cómo creamos nuestros productos con calidad y dedicación.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <small>Publicado: 1 de Enero, 2025</small>
+            </article>
+        </section>
+
+        <!-- Agregado de una lista dinámica -->
+        <section id="lista-interactiva">
+            <h2>Prueba: Lista Dinámica</h2>
+            <p>Haz clic en el botón para añadir elementos a la lista de abajo.</p>
+            <div class="form-group-dinamico">
+                <label for="textoNuevoElemento">Texto para el nuevo elemento:</label>
+                <input type="text" id="textoNuevoElemento" name="textoNuevoElemento" placeholder="Escribe aquí...">
+            </div>
+            <ul id="miListaDinamica">
+                <!-- Aca agrego los elementos -->
+            </ul>
+            <button id="btnAgregarElemento" class="btn-agregar">Agregar Elemento a la Lista</button>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botón y la lista del DOM
+            const botonAgregar = document.getElementById('btnAgregarElemento');
+            const listaDinamica = document.getElementById('miListaDinamica');
+            const inputNuevoElemento = document.getElementById('textoNuevoElemento'); // nuevo campo de texto
+
+            // Función para el evento 'click'
+            botonAgregar.addEventListener('click', function() {
+                const textoDelInput = inputNuevoElemento.value.trim(); // quito espacios extra
+
+                // Verifico si se escribe algo
+                if (textoDelInput === "") {
+                    alert("Por favor, escribe algo para agregar a la lista.");
+                    inputNuevoElemento.focus(); 
+                    return; // Salgo de la función si no hay texto
+                }
+
+                // 1. Nuevo elemento <li>
+                const nuevoElemento = document.createElement('li');
+                // 2. Fijo el contenido del nuevo elemento con el texto
+                nuevoElemento.textContent = textoDelInput;
+                // 3. Agrego el nuevo elemento a la lista
+                listaDinamica.appendChild(nuevoElemento);
+                // 4. Muestro un alerta 
+                alert('Se ha añadido el elemento: "' + textoDelInput + '"');
+                // 5. Limpio el campo de texto 
+                inputNuevoElemento.value = '';
+                inputNuevoElemento.focus();
+            });
+        });
+    </script>
+    <script src="global.js" defer></script>
+</body>
+</html>

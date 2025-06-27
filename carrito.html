@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Revisa los productos en tu carrito de compras. Modifica cantidades o finaliza tu pedido en Mi Tienda Online.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Mi Tienda</title>
+    <link rel="stylesheet" href="base.css"> <!-- Estilos base comunes -->
+    <link rel="stylesheet" href="carrito.css"> <!-- Estilos específicos para el carrito -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+            <li><a href="sesion.html">Inicie Sesión o regístrese</a></li>
+            <li class="nav-cart-icon">
+                <a href="carrito.html" aria-label="Carrito de compras">🛒 <span id="cart-count" class="cart-count-badge">0</span></a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Tu Carrito de Compras</h1>
+    </header>
+
+    <main>
+        <section id="detalle-carrito">
+            <div id="items-carrito-container">
+                <!-- Los productos del carrito se insertarán aquí -->
+                <p class="carrito-vacio-mensaje" style="display: none;">Tu carrito está vacío.</p>
+            </div>
+
+            <div id="total-carrito-container" style="display: none;">
+                <h2>Total del Carrito</h2>
+                <p id="total-precio">Total: $0,00</p>
+                <button id="btn-vaciar-carrito" class="btn-accion-carrito">Vaciar Carrito</button>
+                <button id="btn-finalizar-compra" class="btn-accion-carrito">Finalizar Compra</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="global.js" defer></script>
+    <script src="carrito.js" defer></script>
+</body>
+</html>

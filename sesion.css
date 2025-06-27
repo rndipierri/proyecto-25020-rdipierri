@@ -1,0 +1,86 @@
+/* c:\Users\Silvia Mereles\Desktop\Mi Tienda\sesion.css */
+
+/* Estilos para la sección del formulario */
+#formulario-sesion {
+    max-width: 500px; 
+    margin: 40px auto; 
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+
+#formulario-sesion h2 {
+    text-align: center;
+    color: #007bff; 
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#formulario-sesion p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 25px; 
+    position: relative; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da; 
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+/* Estilos para el texto de error */
+.error-text {
+    color: #dc3545; 
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block; 
+}
+
+/* Estilos cuando hay un error en el campo */
+.form-group.error input {
+    border-color: #dc3545; 
+}
+
+/* Estilos para el botón */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: navy; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #000066; 
+}

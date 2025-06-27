@@ -1,3 +1,4 @@
+/* Estilos específicos para la página de Promociones */
 /* general */
 body {
     font-family: 'Roboto', sans-serif;
@@ -23,16 +24,16 @@ header h1 {
 /* Navegación */
 nav {
     background-color: navy; 
-    padding: 0.5em 1em; /* achico altura */
-    text-align: center; /* Centrar */
+    padding: 0.5em 1em; 
+    text-align: center; 
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* alinear */
-    align-items: center; /* Centro */
+    display: flex; 
+    align-items: center; 
 }
 
 nav ul li {
@@ -53,9 +54,18 @@ nav ul li a:hover {
     background-color: #555;
     border-radius: 4px;
 }
+/* Estilos para el enlace de "Inicio Sesión / Registrarse" */
+nav ul li:nth-last-child(2) {
+    margin-left: auto; 
+    margin-right: 5px; 
+   }
+nav ul li:nth-last-child(2) a {
+    font-size: 1em; 
+    padding: 10px 8px; 
+}
 
 .nav-cart-icon {
-    margin-left: auto; 
+    margin-left: 0; 
     margin-right: 0; 
 }
 
@@ -78,11 +88,10 @@ main {
 
 .promociones-grid {
     display: grid;
-    /*  ajustar para mostrar 3 columnas */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 25px;
-    max-width: 1200px; /* Limitar el ancho máximo */
-    margin: 0 auto; /* Centra la grilla */
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .promo-card {
@@ -91,7 +100,7 @@ main {
     border-radius: 8px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* Sombra */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -128,6 +137,60 @@ main {
     margin-left: 8px;
 }
 
+/* Estilos para los detalles de precios */
+.promo-card .detalle-precios-producto {
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    border-top: 1px dashed #eee; 
+    padding-top: 10px; 
+}
+
+.promo-card .precio-final-item {
+    margin: 5px 0;
+    font-size: 1.1em; 
+    font-weight: bold;
+}
+
+.promo-card .precio-final-etiqueta {
+    color: #333;
+}
+
+.promo-card .precio-final-valor {
+    color: #555; 
+}
+
+.promo-card .precio-base-item {
+    margin: 3px 0;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.promo-card .precio-base-leyenda {
+    font-style: italic;
+    margin-left: 5px;
+}
+
+/* Estilos para el botón "Agregar al Carrito" */
+.btn-agregar-carrito {
+    background-color: navy; 
+    color: white;
+    padding: 12px 20px; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 15px; 
+    display: block; 
+    width: 100%; 
+    box-sizing: border-box; 
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #000066; 
+}
+
 /* Pie de página */
 footer {
     background-color: #333;
@@ -136,16 +199,3 @@ footer {
     padding: 1.5em 0;
     margin-top: 30px;
 }
-@media (max-width: 768px) {
-       nav {
-        overflow-x: auto; /* Habilita el scroll */
-        -webkit-overflow-scrolling: touch; /* Mejora el scroll */
-     }
-   
-    nav ul {
-        display: flex; /* Elementos en línea */
-        white-space: nowrap; 
-        padding-right: 20px;
-    }
-        margin-right: 15px;
-   }

@@ -1,0 +1,119 @@
+/* base.css */
+/* Estilos Generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6; 
+
+/* Encabezado */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navegación */
+nav {
+    background-color: navy;
+    padding: 0.5em 1em; 
+    text-align: center; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    align-items: center; 
+}
+
+nav ul li {
+    display: inline; 
+    margin-right: 20px;
+}
+
+nav ul li a, .nav-cart-icon a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Estilos para el enlace de "Inicio Sesión / Registrarse" */
+nav ul li:nth-last-child(2) {
+    margin-left: auto; 
+    margin-right: 5px; 
+}
+
+nav ul li:nth-last-child(2) a {
+    font-size: 1em; 
+    padding: 10px 8px; 
+}
+
+.nav-cart-icon {
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
+.nav-cart-icon a {
+    padding: 10px;
+    font-size: 1.8em;
+}
+
+/* Estilos para el contador del carrito */
+.cart-count-badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.70em; 
+    vertical-align: super; 
+    margin-left: 3px;
+    display: inline-block;
+    line-height: 1.2; 
+    min-width: 10px; 
+    text-align: center;
+}
+/* Contenido Principal */
+main {
+    padding: 20px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+ }
+
+/* Media query para aplicar estilos */
+@media (max-width: 768px) { 
+    /* Selecciono el contenedor del menú */
+    nav {
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+    }
+    nav ul {
+        display: flex; 
+        white-space: nowrap; 
+          padding-right: 20px;
+       
+    }
+}

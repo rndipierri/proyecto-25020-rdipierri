@@ -1,0 +1,141 @@
+/* carrito.css */
+#detalle-carrito {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#detalle-carrito h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.carrito-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.carrito-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.carrito-item-info {
+    flex-grow: 1;
+}
+
+.carrito-item-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #007bff;
+}
+
+.carrito-item-info .precio-item {
+    font-size: 1em;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.btn-cantidad {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    color: #495057;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.btn-cantidad:hover {
+    background-color: #dee2e6;
+}
+
+.cantidad-valor {
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+.carrito-item-acciones .btn-eliminar-item {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.carrito-item-acciones .btn-eliminar-item:hover {
+    background-color: #c82333;
+}
+
+.carrito-vacio-mensaje {
+    text-align: center;
+    font-size: 1.2em;
+    color: #777;
+    padding: 30px 0;
+}
+
+#total-carrito-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #007bff;
+    text-align: right;
+}
+
+#total-carrito-container h2 {
+    text-align: right; 
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+#total-precio {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn-accion-carrito {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-accion-carrito:hover {
+    background-color: #0056b3;
+}
+
+#btn-vaciar-carrito {
+    background-color: #6c757d;
+}
+#btn-vaciar-carrito:hover {
+    background-color: #5a6268;
+}
