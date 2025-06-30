@@ -1,32 +1,157 @@
-/* Añade estos estilos al final de tu archivo CSS */
+/* Estilos específicos para la página principal (styles.css) */
+/* generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-/* Media query para aplicar estilos solo en pantallas pequeñas (ej. hasta 768px) */
-@media (max-width: 768px) { /* Ajusta el valor si es necesario */
-    /* Selecciona el contenedor de tu menú, ajusta el selector si es necesario */
+/* Encabezado */
+header {
+    background-color: #007bff; 
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navegación */
+nav {
+    background-color: navy; 
+    padding: 0.5em 1em; 
+    text-align: center; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    align-items: center; 
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a, .nav-cart-icon a { 
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.5em; 
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Estilos para el enlace de "Inicio Sesión / Registrarse" */
+nav ul li:nth-last-child(2) {
+    margin-left: auto; 
+    margin-right: 5px; 
+}
+
+nav ul li:nth-last-child(2) a {
+    font-size: 1em; 
+    padding: 10px 8px; 
+}
+
+.nav-cart-icon {
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
+.nav-cart-icon a {
+    padding: 10px; 
+    font-size: 1.8em; 
+}
+
+main {
+    padding-top: 10px; 
+    padding-left: 20px; padding-right: 20px; padding-bottom: 20px;
+    background: linear-gradient(to bottom, #ffffff, #e9e9e9); /* fondo */
+}
+
+section {
+    margin-bottom: 30px;
+    
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+#bienvenida {
+    padding-top: 10px; 
+    text-align: center; 
+}
+/* Estilo de las tres imágenes */
+.trio-imagenes-bienvenida {
+    display: flex; 
+    width: 100%;   
+    margin-top: 20px; 
+    gap: 10px; 
+}
+
+.imagen-contenedor {
+    flex: 1; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    border: 3px solid #444; 
+    height: 300px; 
+}
+
+.imagen-contenedor img {
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out; 
+    object-fit: cover; 
+}
+
+.imagen-contenedor img:hover {
+    transform: scale(1.1); 
+    filter: brightness(0.8); 
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 20px;
+}
+
+/* Media query para aplicar estilos 
+    /* Estilos para la navegación en móviles */
     nav {
-        overflow-x: auto; /* Habilita el scroll horizontal */
-        -webkit-overflow-scrolling: touch; /* Mejora el scroll en dispositivos iOS */
-        /* Opcional: Oculta la barra de scroll si no quieres que sea visible */
-        /* scrollbar-width: none;  Firefox */
-        /* -ms-overflow-style: none;  Internet Explorer 10+ */
-    }
-
-    /* Opcional: Regla para ocultar la barra de scroll en Webkit (Chrome, Safari) */
-    /* nav::-webkit-scrollbar {
-        display: none;
-    } */
-
-    /* Selecciona la lista dentro del menú, ajusta el selector si es necesario */
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
     nav ul {
-        display: flex; /* Asegura que los elementos estén en línea */
-        white-space: nowrap; /* Evita que los elementos se envuelvan */
-        /* Opcional: Añade un poco de espacio al final para que el último elemento no quede pegado */
+        display: flex; 
+        white-space: nowrap; 
         padding-right: 20px;
     }
-
-    /* Opcional: Añade espacio entre los elementos del menú si no lo tienen */
-    /* nav ul li {
-        margin-right: 15px;
-    } */
-
+    .trio-imagenes-bienvenida {
+        flex-direction: column; 
+        align-items: center; 
+    /* Ajuste para las imágenes de bienvenida en móviles */
+    .imagen-contenedor {
+        width: 90%;    /* Cada imagen ocupa el 90% del ancho disponible */
+        height: 200px; 
+        margin-bottom: 15px;
+    }
+    .imagen-contenedor:last-child {
+        margin-bottom: 0; 
+    }
 }
