@@ -132,26 +132,32 @@ footer {
     margin-top: 20px;
 }
 
-/* Media query para aplicar estilos 
-    /* Estilos para la navegación en móviles */
+/* Media query para responsividad en móviles */
+@media (max-width: 768px) {
+    /* Habilita el scroll horizontal para la navegación */
     nav {
-        overflow-x: auto; 
-        -webkit-overflow-scrolling: touch; 
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     nav ul {
-        display: flex; 
-        white-space: nowrap; 
+        display: flex;
+        white-space: nowrap;
         padding-right: 20px;
     }
+
+    /* Apila las imágenes de bienvenida en móviles */
     .trio-imagenes-bienvenida {
-        flex-direction: column; 
-        align-items: center; 
-    /* Ajuste para las imágenes de bienvenida en móviles */
+        flex-direction: column;
+        align-items: center;
+    }
+
     .imagen-contenedor {
         width: 90%;    /* Cada imagen ocupa el 90% del ancho disponible */
-        height: 200px; 
+        height: 200px;
         margin-bottom: 15px;
     }
     .imagen-contenedor:last-child {
-        margin-bottom: 0; 
+        margin-bottom: 0;
     }
 }
