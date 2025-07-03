@@ -141,6 +141,14 @@ main {
     background-color: #0056b3;
 }
 
+/* Estilos para los mensajes de error de validación */
+.error-text {
+    color: #d93025; /* Color rojo para errores */
+    font-size: 0.875em;
+    margin-top: 4px;
+    display: block; /* Para que ocupe su propia línea */
+}
+
 /* Pie de página específico */
 /* Pie de página */
 footer {
